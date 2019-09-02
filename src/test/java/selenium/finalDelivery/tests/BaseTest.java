@@ -15,23 +15,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import selenium.finalDelivery.pages.HomePage;
+import selenium.finalDelivery.utils.GetProperties;
 
 public abstract class BaseTest {
 		
 		public WebDriver driver;
 		public HomePage homePage;
+		public GetProperties prop = new GetProperties();
+		
 
 		@Before
 		public void SetUp() {
-			System.setProperty("webdriver.chrome.driver","driver/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","driver/chromedriver");
 			driver = new ChromeDriver();	
 			
-		//	System.setProperty("webdriver.gecko.driver","driver/geckodriver");
-		//	driver = new FirefoxDriver();		
+			//System.setProperty("webdriver.gecko.driver","driver/geckodriver");
+			//driver = new FirefoxDriver();		
 			
 			//driver.get("http://opencart.abstracta.us"); 
-			
-			driver.get("BASE_URL");
+			driver.get(prop.getString("BASE_URL"));
 			homePage = PageFactory.initElements(driver, HomePage.class);	
 	    }
 			
