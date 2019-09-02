@@ -15,7 +15,7 @@ public class Test5 extends BaseTest {
 
 	@Test
 	@FileParameters("data/productRemove.csv")
-	public void removeProductTest(String product) {
+	public void removeProductTest(String product) throws Exception {
 		SearchResults search;
 		homePage.searchProduct(product);
 		search = homePage.clickSearchButton();
