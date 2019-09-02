@@ -25,11 +25,19 @@ public abstract class BaseTest {
 
 		@Before
 		public void SetUp() {
+<<<<<<< HEAD
 		//System.setProperty("webdriver.chrome.driver","driver/chromedriver");
 		//driver = new ChromeDriver();	
 			
 		System.setProperty("webdriver.gecko.driver","driver/geckodriver");
 		driver = new FirefoxDriver();		
+=======
+			//System.setProperty("webdriver.chrome.driver","driver/chromedriver");
+			//driver = new ChromeDriver();	
+			
+			System.setProperty("webdriver.gecko.driver","driver/geckodriver");
+			driver = new FirefoxDriver();		
+>>>>>>> 2688e25b41b9a0ba9af559155b8914d93aa2d5a4
 			
 			//driver.get("http://opencart.abstracta.us"); 
 			driver.get(prop.getString("BASE_URL"));
