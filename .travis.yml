@@ -6,4 +6,4 @@ addons:
   firefox: "latest"
 script: mvn clean test
 before_install:
-  - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/src/driver/geckodriver
+  - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/driver/geckodriver
