@@ -1,7 +1,5 @@
 package selenium.finalDelivery.pages;
 
-import javax.naming.directory.SearchResult;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,9 +35,9 @@ public class HomePage extends BasePage {
 		inpSearch.sendKeys(product);
 	}	
 		
-	public SearchResult clickSearchButton() {
+	public SearchResults clickSearchButton() {
 		btnSearch.click();
-		return PageFactory.initElements(driver,SearchResult.class);
+		return PageFactory.initElements(driver,SearchResults.class);
 	}
 	
 	/*

@@ -1,7 +1,6 @@
 package selenium.finalDelivery.tests;
 
 import java.util.concurrent.TimeUnit;
-
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.By;
