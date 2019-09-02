@@ -3,7 +3,9 @@ dist: xenial
 services:
   - xvfb
 addons:
-  firefox: "latest"
+  #firefox: "latest"
+  chrome: stable
 script: mvn clean test
 before_install:
   - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/driver/geckodriver
+  - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/driver/chromedriver
