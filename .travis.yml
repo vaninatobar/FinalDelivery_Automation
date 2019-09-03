@@ -2,10 +2,13 @@ language: java
 dist: xenial
 services:
   - xvfb
+env:
+  global:
+    - MOZ_HEADLESS=1
 addons:
   firefox: "latest"
   #chrome: stable
 script: mvn clean test
 before_install:
-  - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/driver/geckodriver
-  - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/driver/chromedriver
+  - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/src/resources/geckodriver
+  - chmod +x /home/travis/build/vaninatobar/FinalDelivery_Automation/src/resources/chromedriver
